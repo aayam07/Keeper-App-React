@@ -1,9 +1,13 @@
 //1. Create a new React app.
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./Components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// For React 17
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>)
 
 //2. Create a App.jsx component.
 //3. Create a Header.jsx component that renders a <header> element
@@ -16,3 +20,6 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //https://l1pp6.csb.app/
 
 //HINT: You will need to study the classes in the styles.css file to appy styling.
+
+//Challenge. Render all the notes inside notes.js as a seperate Note
+//component.
